@@ -1,4 +1,5 @@
 # Code check in Go
+[![Build Status](https://travis-ci.org/Eslem/GoCodeCheck.svg?branch=master)](https://travis-ci.org/Eslem/GoCodeCheck)
 
 Solutions for kata problems in go
 
