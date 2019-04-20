@@ -1,5 +1,7 @@
 package kata
 
+// TODO Separate tools from this package
+
 import (
 	"bufio"
 	"log"
@@ -27,7 +29,7 @@ func readWords(fileName string) []string {
 	return words
 }
 
-func StringToRuneSlice(s string) []rune {
+func stringToRuneSlice(s string) []rune {
 	var r []rune
 	for _, runeValue := range s {
 		r = append(r, runeValue)
@@ -35,8 +37,8 @@ func StringToRuneSlice(s string) []rune {
 	return r
 }
 
-func SortStringByCharacter(s string) string {
-	r := StringToRuneSlice(s)
+func sortStringByCharacter(s string) string {
+	r := stringToRuneSlice(s)
 	sort.Slice(r, func(i, j int) bool {
 		return r[i] < r[j]
 	})
@@ -48,6 +50,7 @@ func timeTrack(start time.Time, name string) {
 	log.Printf("%s took %s  \n", name, elapsed)
 }
 
+// CalculateAnagram returns the total count and the largest anagram in a file
 func CalculateAnagram(fileName string) (int, []string) {
 	defer timeTrack(time.Now(), "calculate anagram "+fileName)
 	words := readWords(fileName)
@@ -59,7 +62,7 @@ func CalculateAnagram(fileName string) (int, []string) {
 	count := 0
 
 	for _, word := range words {
-		sorted := strings.ToLower(SortStringByCharacter(word))
+		sorted := strings.ToLower(sortStringByCharacter(word))
 		_, ok := anagrams[sorted]
 		if !ok {
 			anagrams[sorted] = make([]string, 1)

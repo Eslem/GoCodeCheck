@@ -4,6 +4,7 @@ import (
 	"testing"
 )
 
+//TODO get unit test from website
 func TestKarateChop(t *testing.T) {
 	arr1 := []int{0, 1, 2, 3, 4, 5, 6}
 
