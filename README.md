@@ -6,7 +6,7 @@ Solutions for kata problems in go
 ## Karate Chop
 Problem: [Link](http://codekata.com/kata/kata02-karate-chop/).
 
-Solution: [kata_02](kata_o2.go).
+Solution: [kata_02](kata_02.go).
 ```go
     func binarySearch(arr []int, key int, start int, end int) int {
         if start > end {
@@ -29,7 +29,7 @@ Solution: [kata_02](kata_o2.go).
 
 ## Anagrams
 Problem: [Link](http://codekata.com/kata/kata06-anagrams/).
-Solution: [kata_02](kata_o2.go).
+Solution: [kata_02](kata_02.go).
 ```go
     for _, word := range words {
 		sorted := strings.ToLower(SortStringByCharacter(word))
@@ -38,8 +38,10 @@ Solution: [kata_02](kata_o2.go).
 			anagrams[sorted] = make([]string, 1)
 			anagrams[sorted][0] = word
 		} else {
+			if len(anagrams[sorted]) == 1 {
+				count++
+			}
 			anagrams[sorted] = append(anagrams[sorted], word)
-			count++
-        }
-    }
+		}
+	}
 ```
