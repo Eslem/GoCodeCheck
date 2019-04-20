@@ -14,7 +14,6 @@ func binarySearch(arr []int, key int, start int, end int) int {
 	} else {
 		return middle
 	}
-
 }
 
 func chop(key int, arr []int) int {
