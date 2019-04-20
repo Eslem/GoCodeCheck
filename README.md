@@ -29,7 +29,7 @@ Solution: [kata_02](kata_02.go).
 
 ## Anagrams
 Problem: [Link](http://codekata.com/kata/kata06-anagrams/).
-Solution: [kata_02](kata_02.go).
+Solution: [kata_02](kata_06.go).
 ```go
     for _, word := range words {
 		sorted := strings.ToLower(SortStringByCharacter(word))
