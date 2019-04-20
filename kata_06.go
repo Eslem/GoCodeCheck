@@ -48,7 +48,7 @@ func timeTrack(start time.Time, name string) {
 	log.Printf("%s took %s  \n", name, elapsed)
 }
 
-func calculateAnagram(fileName string) (int, []string) {
+func CalculateAnagram(fileName string) (int, []string) {
 	defer timeTrack(time.Now(), "calculate anagram "+fileName)
 	words := readWords(fileName)
 	anagrams := make(map[string][]string)
@@ -79,7 +79,5 @@ func calculateAnagram(fileName string) (int, []string) {
 
 	log.Printf("count %d \n", count)
 	log.Println("Largest", anagrams[largest][0])
-
-	log.Println()
 	return count, anagrams[largest]
 }
