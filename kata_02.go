@@ -1,4 +1,4 @@
-package kata
+package gocodecheck
 
 func binarySearch(arr []int, key int, start int, end int) int {
 	if start > end {

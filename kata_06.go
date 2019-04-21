@@ -1,12 +1,12 @@
-package kata
+package gocodecheck
 
 import (
 	"log"
 	"time"
 
-	"./datareader"
-	"./stringutil"
-	"./timeutil"
+	"github.com/eslem/gocodecheck/datareader"
+	"github.com/eslem/gocodecheck/stringutil"
+	"github.com/eslem/gocodecheck/timeutil"
 )
 
 // CalculateAnagram returns the total count and the largest anagram in a file
