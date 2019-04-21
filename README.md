@@ -24,7 +24,10 @@ Solution: [kata_02](kata_02.go).
         }
     }
 ```
-
+#### Implementations
+- Iterative
+- Recursive
+- Slice Array
 
 
 ## Anagrams

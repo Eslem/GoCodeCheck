@@ -1,5 +1,4 @@
 package gocodecheck
-
 import (
 	"sort"
 	"strings"
@@ -21,6 +20,7 @@ func sortStringByCharacter(s string) string {
 	return string(r)
 }
 
+// SortAndLowercase Sort and string and change it to lowercase
 func SortAndLowercase(text string) string {
 	return strings.ToLower(sortStringByCharacter(text))
 }

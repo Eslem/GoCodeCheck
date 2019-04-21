@@ -1,5 +1,4 @@
 package gocodecheck
-
 import (
 	"testing"
 )

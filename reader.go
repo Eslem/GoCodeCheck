@@ -1,12 +1,12 @@
 package gocodecheck
-
 import (
 	"bufio"
 	"log"
 	"os"
 )
 
-func ReadWords(fileName string) []string {
+// ReadLines open and file an return an array of it lines
+func ReadLines(fileName string) []string {
 	file, err := os.Open(fileName)
 	var words []string
 

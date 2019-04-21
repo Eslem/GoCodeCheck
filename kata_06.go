@@ -1,14 +1,13 @@
 package gocodecheck
 
 import (
-	"log"
 	"time"
 )
 
 // CalculateAnagram returns the total count and the largest anagram in a file
 func CalculateAnagram(fileName string) (int, []string) {
 	defer TimeTrack(time.Now(), "calculate anagram "+fileName)
-	words := ReadWords(fileName)
+	words := ReadLines(fileName)
 	anagrams := make(map[string][]string)
 
 	var largest string
@@ -33,7 +32,5 @@ func CalculateAnagram(fileName string) (int, []string) {
 		}
 	}
 
-	log.Printf("count %d \n", count)
-	log.Println("Largest", anagrams[largest][0])
 	return count, anagrams[largest]
 }
