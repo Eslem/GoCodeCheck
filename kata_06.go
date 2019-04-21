@@ -4,9 +4,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/eslem/gocodecheck/datareader"
-	"github.com/eslem/gocodecheck/stringutil"
-	"github.com/eslem/gocodecheck/timeutil"
+	"gocodecheck/datareader"
+	"gocodecheck/stringutil"
+	"gocodecheck/timeutil"
 )
 
 // CalculateAnagram returns the total count and the largest anagram in a file
