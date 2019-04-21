@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-var dataPath = "../../data"
+var dataPath = "./data"
 
 func BenchmarkCalculateAnagramSingle(b *testing.B) {
 	b.ReportAllocs()
