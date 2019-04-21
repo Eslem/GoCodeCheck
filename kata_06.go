@@ -3,16 +3,12 @@ package gocodecheck
 import (
 	"log"
 	"time"
-
-	"gocodecheck/datareader"
-	"gocodecheck/stringutil"
-	"gocodecheck/timeutil"
 )
 
 // CalculateAnagram returns the total count and the largest anagram in a file
 func CalculateAnagram(fileName string) (int, []string) {
-	defer timeutil.TimeTrack(time.Now(), "calculate anagram "+fileName)
-	words := datareader.ReadWords(fileName)
+	defer TimeTrack(time.Now(), "calculate anagram "+fileName)
+	words := ReadWords(fileName)
 	anagrams := make(map[string][]string)
 
 	var largest string
@@ -20,7 +16,7 @@ func CalculateAnagram(fileName string) (int, []string) {
 	count := 0
 
 	for _, word := range words {
-		sorted := stringutil.SortAndLowercase(word)
+		sorted := SortAndLowercase(word)
 		_, ok := anagrams[sorted]
 		if !ok {
 			anagrams[sorted] = []string{word}
