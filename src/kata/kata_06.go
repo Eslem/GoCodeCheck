@@ -4,9 +4,9 @@ import (
 	"log"
 	"time"
 
-	"../datareader"
-	"../stringutil"
-	"../timeutil"
+	"datareader"
+	"stringutil"
+	"timeutil"
 )
 
 // CalculateAnagram returns the total count and the largest anagram in a file
