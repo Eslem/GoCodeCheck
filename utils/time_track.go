@@ -1,4 +1,5 @@
-package gocodecheck
+package utils
+
 import (
 	"log"
 	"time"
